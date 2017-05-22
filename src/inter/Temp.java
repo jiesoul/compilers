@@ -1,0 +1,23 @@
+package inter;
+
+import lexer.Word;
+import symbols.Type;
+
+/**
+ * Created by zhangyunjie on 2017/5/22.
+ */
+public class Temp extends Expr {
+    static int count = 0;
+    int number = 0;
+    public Temp(Type type) {
+        super(Word.temp, type);
+        number = ++count;
+    }
+
+    @Override
+    public String toString() {
+        return "Temp{" +
+                "number=" + number +
+                '}';
+    }
+}
